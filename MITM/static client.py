@@ -30,9 +30,9 @@ def decrypt_flag(shared_secret: int, iv: str, ciphertext: str):
 # MAIN PROGRAM
 
 HOST = "socket.cryptohack.org"
-PORT = 13379
+PORT = 13373
 
-connection = pwn.remote(HOST, 13373)
+connection = pwn.remote(HOST, PORT)
 connection.recvuntil(b'Intercepted from Alice: ')
 
 # Alice sends p, g, A
